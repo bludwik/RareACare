@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="gwt-user">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Java/lib/postgresql-9.3-1100.jdbc41.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/WEB-INF/lib/eclipselink.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/WEB-INF/lib/hibernate-validator-4.1.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/WEB-INF/lib/javax.persistence_2.1.0.v201304241213.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/WEB-INF/lib/log4j-1.2.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/WEB-INF/lib/org.eclipse.persistence.jpa.modelgen_2.5.0.v20130507-3faac2b.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/WEB-INF/lib/org.eclipse.persistence.jpars_2.5.0.v20130507-3faac2b.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/WEB-INF/lib/slf4j-api-1.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/WEB-INF/lib/slf4j-log4j12-1.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/WEB-INF/lib/validation-api-1.0.0.GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/WEB-INF/lib/requestfactory-server.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Java/gwtupload-1.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Java/gwt-2.7.0/gwt-user.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/WEB-INF/lib/commons-fileupload-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/WEB-INF/lib/commons-io-2.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../Java/gwtupload-1.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Java/gwt-2.7.0/gwt-user.jar!/" />
+    </SOURCES>
+  </library>
+</component>

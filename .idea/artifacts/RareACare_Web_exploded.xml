@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="RareACare:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/RareACare_Web_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="javaee-facet-classes" facet="RareACare/web/Web" />
+          <element id="module-output" name="RareACare" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="gwtquery-1.4.2.jar" module-name="RareACare" />
+          <element id="library" level="module" name="json_simple-1.1.jar" module-name="RareACare" />
+          <element id="library" level="module" name="gwt-crypto-2.3.0.jar" module-name="RareACare" />
+          <element id="library" level="module" name="gwt-codeserver.jar" module-name="RareACare" />
+          <element id="library" level="module" name="poi-3.0.1.jar" module-name="RareACare" />
+          <element id="file-copy" path="$PROJECT_DIR$/war/WEB-INF/lib/gwtupload-1.0.3.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="RareACare/web/Web" />
+      <element id="gwt-compiler-output" facet="RareACare/gwt/GWT" />
+    </root>
+  </artifact>
+</component>

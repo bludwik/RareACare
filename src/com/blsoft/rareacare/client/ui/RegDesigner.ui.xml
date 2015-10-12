@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:p2="urn:import:com.blsoft.rareacare.client.ui.controls"
+	xmlns:p3="urn:import:com.blsoft.rareacare.client.ui.controls">
+
+	<ui:style>
+	.panel {
+		background-color: ivory;
+	}
+	</ui:style>
+
+	<ui:with field='res' type='com.blsoft.rareacare.client.res.Images' />
+
+	<g:LayoutPanel height="100%" width="100%">
+
+		<g:layer left="0.0em" top="0.0em" height="70px" right="0.0em">
+			<g:HTMLPanel>
+				<div align="right">
+					<g:HorizontalPanel width="30EM" spacing="4">
+
+						<p3:BLButton text="Użytkownicy" imageResource="{res.users32}"
+							ui:field="btnUsers" title="Zarządzanie uprwnieniami użytkowników do rejestru" />
+						<p3:BLButton text="Uporządkuj&nbsp;drzewo"
+							imageResource="{res.align32}" ui:field="btnReOrderTree"
+							title="Porządkuje drzewo ustawiając odpowiednie wcięcia" />
+						<p3:BLButton text="Zapisz&nbsp;do&nbsp;bazy"
+							imageResource="{res.save32}" ui:field="btnSaveAndClose"
+							title="Zapisuje projekt rejestru do bazy" />
+						<p3:BackButton ui:field="btnCancel" title="Powrót do listy rejestrów" />
+						<g:Cell verticalAlignment="ALIGN_MIDDLE"><p2:LogoMini /></g:Cell>
+
+					</g:HorizontalPanel>
+				</div>
+			</g:HTMLPanel>
+		</g:layer>
+
+		<g:layer top="0.5em" height="2.5em" left="8px" right="42.4em">
+			<g:Label styleName="gwt-PageTitle" ui:field="lbCaption" text="Nazwa rej."
+				wordWrap="false" />
+		</g:layer>
+
+		<g:layer top="53px" right="0.0em" left="0.0em" bottom="0.0em">
+			<g:SplitLayoutPanel>
+				<g:west size="168.0">
+					<g:LayoutPanel width="100%" height="100%" styleName="gwt-ScrollPanel">
+						<g:layer left="0px" top="0px" height="2.8em" right="0px">
+							<g:HorizontalPanel spacing="5" width="100%"
+								height="2.8EM">
+								<g:Cell horizontalAlignment="ALIGN_CENTER">
+									<g:PushButton text="Nowy dokument" ui:field="btnAddDoc" />
+								</g:Cell>
+							</g:HorizontalPanel>
+						</g:layer>
+						<g:layer left="0px" top="3.0em" right="0px" bottom="70px">
+							<g:ScrollPanel styleName="gwt-ScrollPanel-padding">
+								<g:FlowPanel width="100%" height="100%" ui:field="docPanel" />
+							</g:ScrollPanel>
+						</g:layer>
+						<g:layer left="0px" height="64px" right="0px" bottom="0px">
+							<g:HTMLPanel>
+								<div align="center">
+									<g:Image height="64px" width="64px" ui:field="imgTrash" />
+								</div>
+
+							</g:HTMLPanel>
+						</g:layer>
+					</g:LayoutPanel>
+				</g:west>
+				<g:center>
+					<g:ScrollPanel styleName="gwt-ScrollPanel-padding"
+						ui:field="docTreeScrollPanel">
+						<g:FlowPanel width="100%" height="2500px" ui:field="docTreePanel">
+						</g:FlowPanel>
+					</g:ScrollPanel>
+				</g:center>
+			</g:SplitLayoutPanel>
+		</g:layer>
+	</g:LayoutPanel>
+</ui:UiBinder>

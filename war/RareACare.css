@@ -1,0 +1,294 @@
+/** Add css rules here for your application. */
+
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 0px 0px 70px;
+  text-align: left;
+}
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+.gwt-DecoratorPanel .middleCenter {
+   height: 100%;
+   width: 100%;
+ }
+.groupHeader {
+	font-size: larger;
+	font-style: normal;
+	font-weight: bold;
+}
+.scrollPanel {
+	border: thin;
+}
+.pageSizePager {
+	vertical-align: middle;
+	text-align: center;
+}
+.gwt-PushButton {
+	vertical-align: middle;
+	text-align: center;
+}
+.gwt-DecoratorPanel {
+	margin: 3px;
+	background-color: White;
+}
+.backgroundPanel {
+	background-color: #ffffcc;
+}
+.gwt-HTML {
+
+}
+.gwt-ItemPanel {
+	padding: 10px;
+	background-color: khaki;
+	border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	box-shadow: 3px 3px 5px gray;
+
+}
+
+.gwt-CellListItem {
+	padding: 2px;
+	border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+	margin-top: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.gwt-ItemPanel-intern {
+	padding : 5px;
+}
+
+.gwt-ItemPanel-selected {
+	background-color: red;
+}
+
+.gwt-HeaderLabel {
+	margin: 5px;
+	font-weight: bold;
+}
+.gwt-ScrollPanel {
+	border: 1px solid Black;
+}
+.gwt-PageTitle {
+	font-size: 1.5EM;
+	font-style: italic;
+	font-weight: bold;
+}
+.gwt-PanelDropTarget {
+	border: 1px solid Red;
+	
+}
+
+.gwt-ItemDropTarget {
+	background-color: aqua;
+}
+.gwt-RoundButton {
+	 border-radius: 5px;
+	 padding: 2px;
+     -moz-border-radius: 5px;
+}
+.gwt-Separator {
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 10px;
+	padding-top: 5px;
+	padding-bottom: 1px;
+	border-top: medium groove;
+}
+
+.dragPointer {
+	margin-right: 40px;
+	margin-left: 30px;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border: medium groove;
+	color : red;
+}
+.ItemsEditorPanel {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.gwt-ScrollPanel-padding {
+	padding-right: 10px;
+	padding-left: 10px;
+	border: 1px solid Black;
+}
+
+.doc-name {
+	font-size: large;
+}
+
+.doc-descr {
+	font-size: larger;
+}
+
+.doc-back {  
+  background-color: white;
+}
+
+.doc-all {  
+  background-color: white;  
+  margin-top: 10px;  
+  margin-right: 10px;  
+  margin-bottom: 10px;  
+  margin-left: 10px;  -webkit-box-shadow: 3px 3px 6px black;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  box-shadow: 3px 3px 6px black;
+}
+
+.doc-elem-label {  
+  vertical-align: top;  
+  width: 25%;
+}
+
+.doc-elem {  
+  padding-top: 10px;  
+  padding-right: 10px;  
+  padding-bottom: 10px;  
+  padding-left: 10px;  
+  margin-top: 5px;  
+  margin-right: 5px;  
+  margin-bottom: 5px;  
+  margin-left: 5px;  
+  vertical-align: top;  
+  width: 100%;
+}
+
+.doc-elemItem {  
+  width: 100%;
+}
+
+.doc-elemItem-label {  
+  vertical-align: top;  
+  width: 25%;
+}
+
+/* Środkowa kolumna - zawiera zasadnicze dane - nie daje szerokości, bo gdy nie ma commentu, to saluje się na poostałą szerokość*/
+.doc-elemItem-body {  
+}
+
+.doc-elemItem-body>input{  
+	width: 95%;
+}
+
+.doc-elemItem-body>textarea{  
+	width: 95%;
+	height: 100%;
+	min-height: 10EM;	
+}
+
+.doc-elemItem-body>select{  
+	width: 95%;
+}
+
+.doc-elemItem-body>label{  
+	width: 95%;
+	font-weight: bold;
+}
+
+/* Klasa dla pojedynczych radiobuttons (zawiera radio + text w SPAN) */
+.doc-elemItem-radio {  
+}
+
+/** Komentarz dla td dla elementu:comment */
+.doc-elemItem-comment-comment {  
+}
+
+/** Komentarz dla td dla comment dla pozostałych elementów*/
+.doc-elemItem-comment {  
+  width: 45%;
+}
+
+
+.doc-comment {  
+  padding: 10px;  
+  margin: 5px;  
+  width: 100%;
+}
+
+.doc-comment-label {  
+  vertical-align: top;  
+  width: 25%;
+}
+
+.doc-comment-comment {
+}
+
+.doc-header {  
+  padding: 5px;  
+  margin: 5px;  
+  border: 1px solid silver;
+  border-radius: 3px;    
+}
+
+.doc-header-add-button {
+	text-align: right;
+	margin-right : 10px;
+	padding-top : 10px;
+}
+
+.doc-header-del-button {
+	text-align: right;
+}
+
+.doc-header-label {  
+  width : 25%;
+  vertical-align: top;  
+  font-size: larger;
+}
+.doc-header-comment {  
+}
+
+.input-error-label {
+	background-color: red;
+	margin-top: 2px;
+	margin-bottom: 6px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 7px;
+}
+
+.input-error-label-critical {
+	background-color: red;
+	margin-top: 2px;
+	margin-bottom: 6px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 7px;
+}
+
+ 

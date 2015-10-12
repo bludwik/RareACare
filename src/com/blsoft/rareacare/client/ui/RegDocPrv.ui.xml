@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:p1="urn:import:com.blsoft.rareacare.client.ui" xmlns:p2="urn:import:com.blsoft.rareacare.client.ui.controls">
+	<ui:style>
+		.panel {
+			background-color: ivory;
+		}
+	</ui:style>
+
+	<ui:with field='res' type='com.blsoft.rareacare.client.res.Images' />
+
+	<g:LayoutPanel ui:field="mainLayout" width="1000px" height="600px" >
+		<g:layer left="0px" top="0px" height="48px" right="0px">
+			<g:LayoutPanel height="48px" width="100%">
+				<g:layer top="0px" right="0px" width="8.0em" bottom="0px">
+					<p2:BLButton text="Zamknij" imageResource="{res.close32}" width="7EM" ui:field="btnClose"/>
+				</g:layer>
+			</g:LayoutPanel>
+		</g:layer>
+		<g:layer left="0px" top="54px" bottom="0px" right="0px">
+			<g:ScrollPanel styleName="gwt-ScrollPanel" ui:field="docPanel"/>
+		</g:layer>
+	</g:LayoutPanel>
+</ui:UiBinder>

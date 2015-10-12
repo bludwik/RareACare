@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:p1="urn:import:com.blsoft.rareacare.client.ui.controls">
+	<ui:style>
+		.panel {
+			background-color: ivory;
+		}
+	</ui:style>
+
+	<ui:with field='res' type='com.blsoft.rareacare.client.res.Images' />
+
+	<g:LayoutPanel styleName="{style.panel}" width="680px" height="315px">
+		<g:layer left="104px" width="145px" top="57px" height="18px">
+			<g:Label text="Użytkownik:"/>
+		</g:layer>
+		<g:layer left="272px" width="50.0pct" top="57px" height="18px">
+			<g:Label text="user" ui:field="lbUser"/>
+		</g:layer>
+		<g:layer left="104px" width="145px" top="101px" bottom="197px">
+			<g:Label text="Stare hasło:"/>
+		</g:layer>
+		<g:layer left="104px" width="145px" top="137px" bottom="162px">
+			<g:Label text="Nowe hasło:"/>
+		</g:layer>
+		<g:layer left="104px" width="145px" top="177px" bottom="121px">
+			<g:Label text="Potwierdzenie hasła:"/>
+		</g:layer>
+		<g:layer left="272px" width="400px" top="99px" height="32px">
+			<g:PasswordTextBox ui:field="edOldPass" width="90%"/>
+		</g:layer>
+		<g:layer left="272px" width="400px" top="137px" height="32px">
+			<g:PasswordTextBox ui:field="edNewPass" width="90%"/>
+		</g:layer>
+		<g:layer left="272px" width="400px" top="175px" height="32px">
+			<g:PasswordTextBox ui:field="edConfPass" width="90%"/>
+		</g:layer>
+		<g:layer left="460px" width="94px" top="244px" height="35px">
+			<p1:BLButton text="Anuluj" imageResource="{res.close24}" ui:field="btnCancel"/>
+		</g:layer>
+		<g:layer left="560px" width="82px" top="244px" height="35px">
+			<p1:BLButton imageResource="{res.ok24}" text="OK" ui:field="btnOK"/>
+		</g:layer>
+	</g:LayoutPanel>
+</ui:UiBinder>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:p1="urn:import:com.blsoft.rareacare.client.ui"
+	xmlns:p2="urn:import:com.blsoft.rareacare.client.ui.controls">
+	<ui:style>
+	.panel {
+		background-color: ivory;
+	}
+	</ui:style>
+
+	<g:DockLayoutPanel styleName="{style.panel}" unit="EM"
+		width="40EM" height="20EM">
+		<g:center>
+			<g:Grid cellPadding="3" cellSpacing="3" width="40EM" height="100%">
+				<g:row>
+					<g:customCell>
+						<g:Label text="Nazwa rejestru" width="10EM"
+							horizontalAlignment="ALIGN_RIGHT" />
+					</g:customCell>
+					<g:customCell>
+						<g:TextBox ui:field="nameEditor" width="20EM" focus="true"
+							 />
+					</g:customCell>
+				</g:row>
+				<g:row>
+					<g:customCell>
+						<g:Label text="Waściciel" horizontalAlignment="ALIGN_RIGHT"
+							width="10EM" />
+					</g:customCell>
+					<g:customCell >
+						<p2:UserSuggestBox width="20EM" ui:field="ownerEditor"
+							 />
+					</g:customCell>
+				</g:row>
+				<g:row>
+					<g:customCell>
+						<g:Label text="Opis rejestru" horizontalAlignment="ALIGN_RIGHT"
+							width="10EM" />
+					</g:customCell>
+					<g:customCell>
+						<g:TextArea ui:field="descrEditor" width="20EM" height="5EM"
+							/>
+					</g:customCell>
+				</g:row>
+			</g:Grid>
+		</g:center>
+		<g:south size="3">
+			<g:HorizontalPanel horizontalAlignment="ALIGN_CENTER"
+				width="100%" height="100%" verticalAlignment="ALIGN_MIDDLE">
+				<g:Cell horizontalAlignment="ALIGN_CENTER">
+					<g:PushButton text="Anuluj" width="6EM" ui:field="btnCancel"
+						tabIndex="5" />
+				</g:Cell>
+				<g:Cell horizontalAlignment="ALIGN_CENTER">
+					<g:PushButton text="OK" width="6EM" ui:field="btnOk"
+						tabIndex="4" />
+				</g:Cell>
+			</g:HorizontalPanel>
+		</g:south>
+	</g:DockLayoutPanel>
+</ui:UiBinder>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:p1="urn:import:com.blsoft.rareacare.client.ui.controls">
+	<ui:style>
+	.panel {
+		background-color: ivory;
+	}
+	</ui:style>
+
+	<ui:with field='res' type='com.blsoft.rareacare.client.res.Images' />
+
+	<g:LayoutPanel styleName="{style.panel}" width="1000px"
+		height="600px" title="Edytor elementów rejestru">
+		<g:layer width="180px" height="36px" right="0px" bottom="2px">
+			<g:HorizontalPanel spacing="4">
+				<g:PushButton text="Anuluj" ui:field="btnCancel" width="70px" />
+				<g:PushButton text="OK" ui:field="btnOK" width="70px" />
+			</g:HorizontalPanel>
+		</g:layer>
+		<g:layer left="0px" top="0px" right="0px" bottom="41px">
+			<g:SplitLayoutPanel styleName="gwt-DialogBox">
+				<g:east size="400.0">
+					<g:LayoutPanel width="100%" height="100%">
+						<g:layer top="0px" bottom="81px" left="5px" right="7px">
+							<g:ScrollPanel >
+								<g:FlowPanel width="100%" height="100%" ui:field="pnProps">
+									<g:Label text="Waściwości wybranego elementu"
+										styleName="gwt-HeaderLabel" />
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnKind">
+										<g:layer>
+											<g:Label text="Rodzaj" />
+										</g:layer>
+										<g:layer left="125px" top="0px" height="24px" right="2px">
+											<g:ListBox ui:field="pedKind" width="100%" />
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel width="100%" height="27px"
+										ui:field="ppnId">
+										<g:layer>
+											<g:Label text="ID" />
+										</g:layer>
+										<g:layer left="125px" top="0px" height="26px" right="0px">
+											<g:TextBox ui:field="pedId" width="95%" />
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnLabel">
+										<g:layer>
+											<g:Label text="Etykieta" width="100%" />
+										</g:layer>
+										<g:layer left="125px" right="0px" top="0px" height="27px">
+											<g:TextBox ui:field="pedLabel" width="95%" />
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel height="98px" width="100%"
+										ui:field="ppnDescr">
+										<g:layer>
+											<g:Label text="Opis/komentarz" />
+										</g:layer>
+										<g:layer top="1px" height="97px" left="125px" right="0px">
+											<g:TextArea ui:field="pedDescr" visibleLines="6"
+												width="95%"/>
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnDataType">
+										<g:layer>
+											<g:Label text="Typ danych" />
+										</g:layer>
+										<g:layer left="125px" right="0px" top="0px" height="27px">
+											<g:ListBox width="100%" ui:field="pedDataType" />
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnUnit">
+										<g:layer>
+											<g:Label text="Jednostka" width="100%" />
+										</g:layer>
+										<g:layer left="125px" right="0px">
+											<g:TextBox ui:field="pedUnit" width="95%"/>
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnNormMin">
+										<g:layer>
+											<g:Label text="Norma - min" />
+										</g:layer>
+										<g:layer left="125px" top="1px" height="26px" right="0px">
+											<g:DoubleBox ui:field="pedNormMin" width="97%" alignment="RIGHT" />
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnNormMax">
+										<g:layer>
+											<g:Label text="Norma - max" />
+										</g:layer>
+										<g:layer left="125px" right="0px" top="0px" height="27px">
+											<g:DoubleBox ui:field="pedNormMax" alignment="RIGHT" width="97%"/>
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel height="98px" width="100%" ui:field="ppnNormDescr">
+										<g:layer>
+											<g:Label text="Norma - opis" />
+										</g:layer>
+										<g:layer left="125px" right="0px" top="0px" height="97px">
+											<g:TextArea visibleLines="6" ui:field="pedNormDescr"
+												width="95%"/>
+										</g:layer>
+									</g:LayoutPanel>
+
+									<g:LayoutPanel height="100px" width="100%"
+										ui:field="ppnItems">
+										<g:layer>
+											<g:Label text="Lista wartości" />
+										</g:layer>
+										<g:layer left="125px" right="0px" top="0px" height="94px">
+											<g:TextArea visibleLines="6" width="95%"
+												ui:field="pedItems" title="Lista wartości. Każda wartość w oddzielnej lini." />
+										</g:layer>
+									</g:LayoutPanel>
+
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnLimitToList">
+										<g:layer>
+											<g:Label text="Ogranicz jedynie do listy" />
+										</g:layer>
+										<g:layer left="180px" right="0px" top="0px" height="27px">
+											<g:CheckBox ui:field="pcbLimitToList" />
+										</g:layer>
+									</g:LayoutPanel>
+
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnRequired">
+										<g:layer>
+											<g:Label text="Czy wymagane" />
+										</g:layer>
+										<g:layer left="180px" right="0px" top="0px" height="27px">
+											<g:CheckBox ui:field="pcbRequired" />
+										</g:layer>
+									</g:LayoutPanel>
+
+									<g:LayoutPanel width="100%" height="27px"
+										ui:field="ppnPlaceHolder">
+										<g:layer>
+											<g:Label text="Podpowiedź w polu" />
+										</g:layer>
+										<g:layer left="125px" top="0px" height="26px" right="0px">
+											<g:TextBox ui:field="pedPlaceHolder" width="95%" />
+										</g:layer>
+									</g:LayoutPanel>
+
+									<g:LayoutPanel height="54px" width="100%"
+										ui:field="ppnMinMax">
+										<g:layer top="0px" height="27px">
+											<g:Label text="Wartość minimalna" />
+										</g:layer>
+										<g:layer top="27px" height="27px">
+											<g:Label text="Wartość maksymalna" />
+										</g:layer>
+										<g:layer left="125px" right="0px" top="0px" height="27px">
+											<g:DoubleBox ui:field="pedMin" alignment="RIGHT" width="97%"/>
+										</g:layer>
+										<g:layer left="125px" right="0px" top="27px" height="27px">
+											<g:DoubleBox ui:field="pedMax" alignment="RIGHT" width="97%"/>
+										</g:layer>
+									</g:LayoutPanel>
+
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnMaxLen">
+										<g:layer>
+											<g:Label text="Maksymalna dułgość" />
+										</g:layer>
+										<g:layer left="125px" right="0px" top="0px" height="27px">
+											<g:IntegerBox ui:field="pedMaxLen" alignment="RIGHT" width="97%"/>
+										</g:layer>
+									</g:LayoutPanel>
+
+									<g:LayoutPanel width="100%" height="27px"
+										ui:field="ppnRegExpr">
+										<g:layer>
+											<g:Label text="Wyrażenie regularne" />
+										</g:layer>
+										<g:layer left="125px" top="0px" height="26px" right="0px">
+											<g:TextBox ui:field="pedRegExpr" width="95%" />
+										</g:layer>
+									</g:LayoutPanel>
+
+
+								</g:FlowPanel>
+							</g:ScrollPanel>
+						</g:layer>
+						<g:layer left="0px" height="64px" right="0px" bottom="0px">
+							<g:HTMLPanel>
+								<div align="center">
+									<g:Image resource='{res.trash}' height="64px" width="64px"
+										ui:field="imgTrash" />
+								</div>
+
+							</g:HTMLPanel>
+						</g:layer>
+					</g:LayoutPanel>
+				</g:east>
+				<g:center>
+					<g:LayoutPanel width="100%" height="100%">
+						<g:layer left="31px" width="131px" top="24px" height="18px">
+							<g:Label text="Etykieta elementu" />
+						</g:layer>
+						<g:layer left="200px" top="18px" height="34px" right="32px">
+							<g:TextBox ui:field="edLabel" width="95%" />
+						</g:layer>
+						<g:layer left="31px" width="141px" top="57px" height="18px">
+							<g:Label text="ID elementu (np. EF)" />
+						</g:layer>
+						<g:layer left="200px" top="50px" height="34px" right="32px">
+							<g:TextBox ui:field="edId" width="95%" />
+						</g:layer>
+						<g:layer left="25px" width="150px" top="100px" height="28px">
+							<g:Label text="Składowe elementu" styleName="gwt-HeaderLabel" />
+						</g:layer>
+						<g:layer left="29px" top="134px" right="13px" bottom="9px">
+							<g:ScrollPanel styleName="gwt-ScrollPanel"
+								ui:field="itemsScroll">
+								<g:FlowPanel width="100%" height="1000px" ui:field="itemsPanel" />
+							</g:ScrollPanel>
+						</g:layer>
+						<g:layer width="120px" top="94px" height="30px" right="13px">
+							<g:PushButton text="Dodaj pozycję" ui:field="btnAddItem" />
+						</g:layer>
+						<g:layer width="120px" top="94px" height="30px" right="139px">
+							<g:PushButton text="Usuń pozycję" ui:field="btDelItem" />
+						</g:layer>
+					</g:LayoutPanel>
+				</g:center>
+			</g:SplitLayoutPanel>
+		</g:layer>
+	</g:LayoutPanel>
+</ui:UiBinder>

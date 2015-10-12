@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:p1="urn:import:com.blsoft.rareacare.client.ui.controls">
+	<ui:style>
+	.panel {
+		background-color: ivory;
+	}
+	</ui:style>
+
+	<ui:with field='res' type='com.blsoft.rareacare.client.res.Images' />
+
+	<g:LayoutPanel styleName="{style.panel}" width="1000px" height="550px">
+		<g:layer left="20px" width="271px" top="111px" height="278px">
+			<g:ListBox visibleItemCount="1000" ui:field="lbAll" width="100%" height="100%" />
+		</g:layer>
+		<g:layer left="20px" width="271px" top="16px" height="89px">
+			<g:InlineHTML>Lista wszystkich pól dostępnych w dokumencie</g:InlineHTML>
+		</g:layer>
+		<g:layer left="350px" width="258px" top="111px" height="278px">
+			<g:ListBox visibleItemCount="1000" ui:field="lbInfo" width="100%" height="100%" />
+		</g:layer>
+		<g:layer left="350px" width="258px" top="16px" height="89px">
+			<g:InlineHTML>Lista pól służących do budowania informacji o
+				dokumencie na liście dokumentów</g:InlineHTML>
+		</g:layer>
+		<g:layer left="662px" top="174px" height="215px" right="51px">
+			<g:ListBox visibleItemCount="1000" ui:field="lbUnique" width="100%" height="100%" />
+		</g:layer>
+		<g:layer left="662px" width="287px" top="16px" height="152px">
+			<g:InlineHTML>Lista pól wykorzystywanych do identyfikowania dokumentu w ramach dokumentów tego samego typu w sytuacji, gdy dokument może występować kilkukrotnie. Ma znaczenie, gdy "ilość powtórzeń" jest większa od 1. Zwykle wystarczy 1 pole - np. data wizyty</g:InlineHTML>
+		</g:layer>
+		<g:layer left="886px" top="146px" height="26px" right="51px">
+			<g:IntegerBox ui:field="edMax" value="1" title="Maksymalna ilość dokumentów tego samego typu wystepujących w ramach tego samego dokumentu nadrzędnego. Gdy 1, to dokument może występować raz." width="58px" alignment="RIGHT" />
+		</g:layer>
+		<g:layer left="662px" width="222px" top="148px" height="18px">
+			<g:Label text="Maksymalna ilość powtórzeń" />
+		</g:layer>
+		<g:layer left="297px" width="42px" top="220px" height="150px">
+			<g:VerticalPanel>
+				<p1:BLButton imageResource="{res.arrowRight24}" ui:field="btnAddToInfo" />
+				<g:InlineHTML>
+					<br />
+				</g:InlineHTML>
+				<p1:BLButton imageResource="{res.arrowLeft24}" ui:field="btnDelFromInfo" />
+			</g:VerticalPanel>
+		</g:layer>
+		<g:layer left="615px" width="42px" top="220px" height="150px">
+			<g:VerticalPanel>
+				<p1:BLButton imageResource="{res.arrowRight24}" ui:field="btnAddToUnique" />
+				<g:InlineHTML>
+					<br />
+				</g:InlineHTML>
+				<p1:BLButton imageResource="{res.arrowLeft24}" ui:field="btnDelFromUnique" />
+			</g:VerticalPanel>
+		</g:layer>
+		<g:layer left="440px" width="100px" top="395px" height="100px">
+			<g:HorizontalPanel>
+				<p1:BLButton imageResource="{res.arrowUp24}" ui:field="btnUp2" />
+				<g:InlineHTML>&nbsp;&nbsp;&nbsp;</g:InlineHTML>
+				<p1:BLButton imageResource="{res.arrowDown24}" ui:field="btnDown2" />
+			</g:HorizontalPanel>
+		</g:layer>
+		<g:layer left="771px" width="100px" top="395px" height="100px">
+			<g:HorizontalPanel>
+				<p1:BLButton imageResource="{res.arrowUp24}" ui:field="btnUp3" />
+				<g:InlineHTML>&nbsp;&nbsp;&nbsp;</g:InlineHTML>
+				<p1:BLButton imageResource="{res.arrowDown24}" ui:field="btnDown3" />
+			</g:HorizontalPanel>
+		</g:layer>
+		<g:layer left="801px" width="209px" top="467px" height="48px">
+			<g:HorizontalPanel spacing="6">
+				<p1:BLButton text="Anuluj" imageResource="{res.close24}" ui:field="btnCancel"/>
+				<p1:BLButton text="OK" imageResource="{res.ok24}" ui:field="btnOk"/>
+			</g:HorizontalPanel>
+		</g:layer>
+	</g:LayoutPanel>
+</ui:UiBinder>

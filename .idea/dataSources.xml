@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1177064551">
+    <data-source source="LOCAL" name="RareACare" uuid="347c1641-e71e-40b7-9273-b8f886df42ff">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5433/rac</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

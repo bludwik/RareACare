@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="RareACare">
+		<class>com.blsoft.rareacare.model.Address</class>
+		<class>com.blsoft.rareacare.model.DDocElem</class>
+		<class>com.blsoft.rareacare.model.DocAttach</class>
+		<class>com.blsoft.rareacare.model.Document</class>
+		<class>com.blsoft.rareacare.model.EntityBase</class>
+		<class>com.blsoft.rareacare.model.Fact</class>
+		<class>com.blsoft.rareacare.model.Institution</class>
+		<class>com.blsoft.rareacare.model.RegUser</class>
+		<class>com.blsoft.rareacare.model.Registry</class>
+		<class>com.blsoft.rareacare.model.User</class>
+		<class>com.blsoft.rareacare.model.UserLoginLog</class>				
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5433/rac" />
+			<property name="javax.persistence.jdbc.user" value="rac_admin" />
+			<property name="javax.persistence.jdbc.password" value="rubik" />
+<!-- 
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			<property name="eclipselink.ddl-generation.output-mode"	value="database" />
+ -->
+			<property name="eclipselink.logging.level" value="FINE" />
+			<property name="eclipselink.logging.parameters" value="true" />
+
+		</properties>
+	</persistence-unit>
+
+</persistence>

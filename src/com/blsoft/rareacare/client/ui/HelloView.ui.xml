@@ -1,0 +1,313 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:p2="urn:import:com.blsoft.rareacare.client.ui.controls"
+             xmlns:p1="urn:import:com.blsoft.rareacare.client.ui">
+    <ui:style>
+        .panel {
+            background-color: ivory;
+        }
+    </ui:style>
+
+    <ui:with field='res' type='com.blsoft.rareacare.client.res.Images'/>
+
+    <g:LayoutPanel height="100%" width="100%">
+
+        <g:layer top="0pt" right="0pt" left="0pt" height="300pt">
+            <g:HTMLPanel>
+                <!-- Główny ekran -->
+
+                <p
+                        style="text-align: center;
+        font-family: Arial, Helvetica, sans-serif;            
+		font-size: 100pt;  
+		font-weight: bold;
+		padding-top: 20pt;
+		margin-top : 0pt;
+		margin-bottom : 0pt;
+		padding-bottom: 0pt;
+		">
+                    Rare
+                    <spam style="color:red;font-size:120pt;">A</spam>
+                    Care
+
+                    <div
+                            style="
+		text-align: center;
+		font-size: 23pt;  
+		font-weight: normal;">
+                        Kompleksowy system rejestrów medycznych ELEKTRA
+
+                        <div
+                                style="margin-left: auto; margin-right: auto; width : 180pt; margin-top: 30pt">
+                            <p2:BLButton text="Logowanie do systemu"
+                                         imageResource="{res.login48}" ui:field="btnLogin"/>
+                        </div>
+
+                    </div>
+                </p>
+
+            </g:HTMLPanel>
+
+        </g:layer>
+        <g:layer top="300pt" right="0.0em" left="0.0em" bottom="0.0em">
+            <g:ScrollPanel height="100%">
+                <g:HTML>
+
+                    <div
+                            style="text-align: justify;
+		padding-left : 70pt;
+		padding-right : 70pt;
+        font-family: Arial, Helvetica, sans-serif;            
+		font-size: 12pt;">
+                        Arytmia serca to sytuacja, kiedy serce pracuje zbyt szybko, zbyt
+                        wolno lub zbyt niemiarowo w stosunu do prawidłowej pracy serca w
+                        rytmie zatokowym. Już w starożytnej Grecji odkryto cechy
+                        nieprawidłowego rytmu serca, który w skrajnej sytuacji może
+                        zaburzać
+                        rytm codziennego życia.
+
+                        <p>Współcześnie rzadko występujące arytmie lub techniki ich
+                            leczenia
+                            definiuje się jako sytuacje kliniczne występujące
+                            sporadycznie,
+                            zwykle w liczbie poniżej 1-2 przypadków na 5 tysięcy
+                            osób w
+                            populacji
+                            ogólnej.
+                        </p>
+                        <p>Rzadka arytmiczna choroba może być zdiagnozowana jako
+                            pierwotnie
+                            genetycznie uwarunkowana arytmia (IPAS), arytmia
+                            leczona metodą
+                            przezskórnej, cewnikowej ablacji (CA), stymulacją
+                            serca (PM),
+                            terapią resynchronizującą (CRT) lub implantowanym
+                            kardiowerterem-defibrylatorem (ICD). W Polsce, w ponad
+                            35-milionowym
+                            kraju, gdzie wykonuje się do w przybliżeniu 10
+                            tysięcy
+                            ablacji
+                            arytmii, do ponad 25 tysięcy wszczepień
+                            rozruszników
+                            serca,
+                            oraz
+                            kilku tysięcy wszczepień ICD i CRT
+                            właściwie każde
+                            zaburzenie
+                            rytmu i
+                            przewodzenia powinno uznać się za
+                            rzadką chorobę.
+                        </p>
+
+                        <p>Każda rzadkich arytmii to unikalny, problem jednego promila
+                            chorych spośród kilku tysięcy chorych przeżywających nagłe
+                            zatrzymanie krążenia (NZK), ponad stu tysięcy chorych leczonych
+                            rocznie z powodu zawału serca (MI) lub kilkuset tysięcy chorych z
+                            arytmią spośród ponad 35 milionów mieszkańców Polski.
+                        </p>
+
+                        <p>Ten promil chorych, to jak promile znane z bezpieczeństwa ruchu
+                            drogowego są istotne dla bezpieczeństwa całego społeczeństwa i
+                            uczestników ruchu drogowego. Wszyscy Ci chorzy zasługują i
+                            wymagają
+                            indywidualnego wywiadu, badania, podejścia, oceny
+                            rokowania i
+                            terapii
+                            pacjenta i jego rodziny. Jeśli dołączymy do
+                            tego
+                            wyjątkowe
+                            sytuacje
+                            kliniczne (młody wiek, ciążę, anomalie
+                            budowy
+                            serca i
+                            naczyń,
+                            różnorodne techniki leczenia) to uzyskujemy
+                            nieskończoną
+                            listę
+                            kombinacji rzadkich chorób, ich
+                            objawów,
+                            rokowania
+                            i leczenia,
+                            które
+                            są unikalnym zjawiskiem nie tylko w
+                            Polsce, ale być
+                            może i na
+                            świecie.
+                        </p>
+
+                        <p>Sporadycznie występujące choroby, poznanie ich mechanizmów i
+                            sposobów leczenia może stać się okazją do stworzenia nowatorskich
+                            metod diagnostyki, prewencji i leczenia wielu innych bardziej
+                            powszechnych chorób, dotyczących już procentów lub dużej części
+                            społeczeństwa.
+                        </p>
+
+                        <p>Z tych względów powstała inicjatywa RARE-A-CARE-skupiająca
+                            lekarzy, pacjentów i ich rodziny, pracowników służby zdrowia i
+                            nauk
+                            biologicznych, inżynierów i wynalazców, aby gromadzić,
+                            przekazywać
+                            wiedzę, doświadczenia i podsumowywać obserwacje
+                            kliniczne w
+                            sytuacjach rzadkich arytmii i rzadkich technik
+                            inwazyjnego leczenia
+                            arytmii serca.
+                            Opieka medyczna w rzadkiej
+                            arytmii (rare arrhythmic
+                            care = Rare
+                            -Arrhythmic &#x2013;Care) to
+                            portal przeznaczony dla
+                            chorych i ich
+                            lekarzy, którzy zajmują się
+                            rzadkimi chorobami
+                            związanymi z
+                            zaburzeniami rytmu i przewodzenia.
+                            Celem portalu jest
+                            stworzenie
+                            platformy wymiany informacji, bazy
+                            wiedzy i
+                            elektronicznych
+                            konsultacji specjalistów oraz rejestrów
+                            medycznych
+                            rzadkich chorób
+                            w celu ich lepszego poznania,
+                            diagnozowania,
+                            leczenia
+                            i
+                            zapobiegania powikłaniom.
+                        </p>
+                        <p>Do projektu "Rare-A-Care" zostali zaproszeni polscy eksperci
+                            zaznajomieni z występującymi sporadycznie chorobami arytmicznymi.
+                            Czasami są ekspertami choroby jeszcze nie odkrytej w Polsce,
+                            czasami
+                            specjalistami leczenia jednego lub kilku chorych z
+                            wybitnie
+                            rzadką
+                            chorobą. Prowadzenie jednego chorego może jednak
+                            stanowić
+                            okazję do
+                            stania się ekspertem, do stania się
+                            nauczycielem
+                            dla
+                            innych
+                            lekarzy i
+                            inicjatorem odpowiedniego
+                            diagnozowania i
+                            leczenia
+                            innych
+                            chorych.
+                            Jeden przypadek choroby
+                            może
+                            otworzyć okazję
+                            do
+                            lepszego
+                            leczenia
+                            dziesiątek i setek innych chorych.
+                            Zwykle
+                            zapraszani do
+                            prowadzenia
+                            danego działu lub rejestru
+                            eksperci
+                            stanowią grono
+                            pasjonatów
+                            zainspirowanych doniesieniami z
+                            zagranicy,
+                            najnowszą
+                            wiedzą i
+                            standardami leczenia oraz własnymi
+                            obserwacjami i
+                            doświadczeniami. Są
+                            oni też ekspertami, którzy sami
+                            sobie wyznaczyli
+                            najwyższe kryteria
+                            jakości, dociekliwości,
+                            wątpliwości i
+                            odpowiedzialności przy
+                            mierzeniu się z rzadkimi
+                            chorobami
+                            arytmicznymi. Ich pacjentami stają
+                            się chorzy o czasami
+                            nieznanym
+                            rokowaniu, sposobie diagnostyki i
+                            leczenia, gdzie nie ma
+                            wytyczonych
+                            szlaków postępowania i reguł.
+                            Razem z naszymi
+                            pacjentami, dla ich
+                            dobra i dla dobra innych
+                            chorych
+                            i lekarzy,
+                            chcemy poznawać,
+                            rozumieć, pomagać więcej,
+                            lepiej i
+                            bardziej
+                            pewniej.
+                            Każde
+                            doświadczenia chorego i jego
+                            lekarza
+                            prowadzącego
+                            rzadką
+                            chorobą
+                            arytmiczną może stanowić
+                            okazję do
+                            odkrywania nowych
+                            form
+                            diagnostyki
+                            i terapii dla innych
+                            chorych i
+                            lekarzy.
+                        </p>
+
+                        <p>Do grona ekspertów zapraszamy też ekspertów z zagranicy
+                            &#x2013;
+                            lekarzy, organizacje pacjentów i producentów leków lub
+                            sprzętu
+                            medycznego &#x2013; pozwalającego na dobór unikalnej
+                            wiedzy,
+                            konsultacji, wsparcia i odpowiedniej terapii.
+                        </p>
+
+                        <p>RARE-A-CARE wychodzi na przeciw pacjentom i lekarzom, którzy
+                            wcielają w życie również hasło: DARE-A-CARE czyli
+                            &#x201C;rzadkiej
+                            arytmii opieka&#x201D; - "odważ się/ośmiel się do
+                            arytmicznej
+                            opieki" rzadkiej choroby. Rzadka choroba to wyzwanie
+                            dla lekarza i
+                            pacjenta - do podejmowania trudnych, czasami
+                            odważnych decyzji,
+                            do
+                            ośmielenia się do wprowadzania innowacyjnych
+                            technik diagnostyki i
+                            leczenia. Dlatego ośmielamy się również do
+                            zapraszania lekarzy i
+                            chorych do włączenia się w tworzenie tej
+                            platformy i wsparcie
+                            pacjentów, lekarzy, naukowców i wynalazców w
+                            tworzeniu
+                            unikalnych,
+                            rzadkich metod diagnostycznych i leczniczych.
+                        </p>
+
+                        <p>"Ścieżka może nie istnieć. Twoje stopy być może po raz pierwszy
+                            wytyczą szlak, dla drogi powrotnej, dla innych, dla poznania
+                            nieznanej krainy i losu. Wspomnienia z tej wyprawy mogą być
+                            poradą
+                            dla innych wędrowców, odkrywców i ludzi, których życie i
+                            los rzuci
+                            w
+                            tą nieznaną i nieodkrytą krainę, którym pomocną będą
+                            chcieli
+                            podać
+                            podobni Tobie".
+                        </p>
+
+                    </div>
+                </g:HTML>
+            </g:ScrollPanel>
+        </g:layer>
+    </g:LayoutPanel>
+
+
+</ui:UiBinder>

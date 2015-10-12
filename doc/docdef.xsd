@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML Studio - FREE Community Edition 7.0.4.795 (http://www.liquid-technologies.com)-->
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RareACareDocDef">
+    <xs:annotation>
+      <xs:documentation>Dokument definicji dokumentów RareACare</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Elems">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="Elem" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Docs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="Doc" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="ID" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>ID dokumentu</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="Ver" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Wersja dokumentu</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="Name" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elem">
+    <xs:annotation>
+      <xs:documentation>Definicja dokumentu
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="1" maxOccurs="unbounded">
+        <xs:choice>
+          <xs:element name="Comment">
+            <xs:complexType>
+              <xs:simpleContent>
+                <xs:extension base="xs:string" />
+              </xs:simpleContent>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Input">
+            <xs:complexType>
+              <xs:attribute name="Label" type="xs:string" />
+              <xs:attribute name="Descr" type="xs:string" />
+              <xs:attribute name="SubID" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>Opcjonalne ID gdy w ramach elementu jest więcej pól - wówczas ostateczna ID pola = ElemID i w zagębieniu SubID
+Jeśli NULL, to przejmuje ID z Elem</xs:documentation>
+                </xs:annotation>
+              </xs:attribute>
+              <xs:attribute name="Units" type="xs:string" />
+              <xs:attribute name="NormMin" type="xs:float" />
+              <xs:attribute name="NormMax" type="xs:float" />
+              <xs:attribute name="NormDescr" type="xs:string" />
+              <xs:attribute name="DataType" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Separator" />
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="ID" type="xs:string" />
+      <xs:attribute name="Label" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Opcjonalna etykieta caego elementu - np. "Echo serca". Może ni ebyć okreslona - szczególnie dla elementów jednopolowych</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Doc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element name="Header">
+            <xs:annotation>
+              <xs:documentation>Określa stopień zagębienia elementów wymienionych po headerze.
+Wartość zawiera komentarz (treść naglówka)</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:simpleContent>
+                <xs:extension base="xs:string">
+                  <xs:attribute name="Level">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="0" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="ID" />
+                </xs:extension>
+              </xs:simpleContent>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Elem">
+            <xs:complexType>
+              <xs:attribute name="IsList" type="xs:boolean" />
+              <xs:attribute name="PrimaryKey" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>Pełne ID elementu będącego kluczem glownym dla identyfikowania rekordu
+</xs:documentation>
+                </xs:annotation>
+              </xs:attribute>
+              <xs:attribute name="ID" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Comment" type="xs:string" />
+          <xs:element name="Separator" />
+          <xs:element name="PageBreak" />
+          <xs:element ref="Doc" />
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="ID" type="xs:string" />
+      <xs:attribute name="Name" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

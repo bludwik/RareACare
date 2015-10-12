@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:p1="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:p2="urn:import:com.blsoft.rareacare.client.ui.controls" xmlns:p3="urn:import:com.blsoft.rareacare.client.ui">
+	<ui:style>
+	.panel {
+		background-color: ivory;
+	}
+	</ui:style>
+
+	<ui:with field='res' type='com.blsoft.rareacare.client.res.Images' />
+
+	<g:LayoutPanel styleName="{style.panel}" height="100%"
+		width="100%">
+		<g:layer left="0.0em" top="0.0em" height="3.3em" right="0.0em">
+			<g:HTMLPanel>
+				<div align="right">
+					<g:HorizontalPanel spacing="4" width="30EM">
+
+						<p2:BLButton text="Podgląd" imageResource="{res.prev24}"
+							ui:field="btnDocPrv" />
+						<p2:BLButton text="Właściwości" imageResource="{res.props24}"
+							ui:field="btnPropsEx" />
+						<p2:BLButton text="Nazwa/ID" imageResource="{res.info24}"
+							ui:field="btnProps" />
+						<p2:BLButton text="Anuluj" imageResource="{res.close24}"
+							ui:field="btnCancel" title="Zamyka porzucając zmiany" />
+						<p2:BLButton text="OK" imageResource="{res.ok24}"
+							ui:field="btnOk" title="Akceptuje zmiany i zamyka edytor dokumentu" />
+						<p2:LogoMini />
+					</g:HorizontalPanel>
+				</div>
+			</g:HTMLPanel>
+		</g:layer>
+		<g:layer left="0.0em" top="3.2em" bottom="0px" right="0.0em">
+			<g:SplitLayoutPanel>
+	
+				<!--  Głowny edytor -->
+	
+				<g:center>
+					<g:ScrollPanel styleName="gwt-ScrollPanel-padding"
+						ui:field="scrollDocTreePanel">
+						<g:FlowPanel width="100%" height="200EM" ui:field="elemTreePanel" />
+					</g:ScrollPanel>
+				</g:center>
+
+				<!--  Dostępne elementy -->
+
+				<g:west size="250.0">
+					<g:LayoutPanel width="100%" height="100%">
+						<g:layer left="0px" top="0.0em" right="0px" bottom="0px">
+							<g:StackLayoutPanel width="100%" height="100%"
+								unit="EM">
+								<g:stack>
+									<g:header size="2">Kontrolki</g:header>
+									<g:FlowPanel ui:field="pnControls" styleName="ItemsEditorPanel">
+									</g:FlowPanel>
+								</g:stack>
+								<g:stack>
+									<g:header size="2">Dostępne elementy</g:header>
+									<g:LayoutPanel width="100%" height="100%">
+										<g:layer top="0px" height="82px" right="0px" left="0px">
+											<g:HorizontalPanel spacing="2">
+												<p2:BLButton imageResource="{res.add24}" text="Nowy" title="Dodawanie nowego elementu do listy dostępnych elementów w definicji rejestru" ui:field="btnAdd"/>
+												<p2:BLButton imageResource="{res.delete24}" text="Usuń" title="Usuwa element z rejestru" ui:field="btnDeleteElem"/>
+												<p2:BLButton imageResource="{res.open24}" text="Otwórz" title="Otwarcie wskazanego elementu do edycji" ui:field="btnOpenElem"/>
+											</g:HorizontalPanel>
+										</g:layer>
+										<g:layer top="41px" height="41px" right="0px" left="0px">
+											<g:HorizontalPanel spacing="2">
+												<p2:BLButton imageResource="{res.list24}" text="Repozytorium" title="Otwarcie repozytorium gotowych elementów" ui:field="btnRep"/>
+												<p2:BLButton imageResource="{res.export24}" text="Eksport" title="Eksport wskazanego elementu do repozytorium" ui:field="btnExportElem"/>
+											</g:HorizontalPanel>
+										</g:layer>
+										<g:layer left="0px" top="84px" right="9px" bottom="15px">
+											<g:ScrollPanel styleName="gwt-ScrollPanel-padding">
+												<g:FlowPanel width="100%" height="100%"
+													ui:field="pnElems" />
+											</g:ScrollPanel>
+										</g:layer>
+									</g:LayoutPanel>
+								</g:stack>
+							</g:StackLayoutPanel>
+						</g:layer>
+
+					</g:LayoutPanel>
+				</g:west>
+
+				<!-- Toolbox -->
+
+				<g:east size="400.0">
+					<g:LayoutPanel width="100%" height="100%" styleName="gwt-ScrollPanel">
+						<g:layer top="0px" bottom="70px" left="5px" right="7px">
+							<g:ScrollPanel>
+								<g:FlowPanel width="100%" height="100%" ui:field="ppnProps">
+									<g:Label text="Waściwości wybranego elementu"
+										styleName="gwt-HeaderLabel" />
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnKind">
+										<g:layer>
+											<g:Label text="Rodzaj" />
+										</g:layer>
+										<g:layer left="125px" top="0px" height="24px" right="0px">
+											<g:Label ui:field="pedKind" width="100%" />
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel width="100%" height="27px"
+										ui:field="ppnId">
+										<g:layer>
+											<g:Label text="ID" />
+										</g:layer>
+										<g:layer left="125px" top="0px" height="26px" right="0px">
+											<g:TextBox ui:field="pedId" width="96%"
+												title="Unikatowy w ramach grupy identyfikator pola. Dla elementów pochodzi z definicji elementu i nie może być zmieniany" />
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnLabel">
+										<g:layer>
+											<g:Label text="Etykieta" width="100%" />
+										</g:layer>
+										<g:layer left="125px" right="0px" top="0px" height="27px">
+											<g:TextBox ui:field="pedLabel" width="96%"
+												title="Etykieta elementu prezentowana w dokumencie" />
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel height="98px" width="100%"
+										ui:field="ppnDescr">
+										<g:layer>
+											<g:Label text="Opis/komentarz" />
+										</g:layer>
+										<g:layer left="125px" right="0px" bottom="4px" top="3.0pct">
+											<g:TextArea ui:field="pedDescr" visibleLines="6"
+												width="96%" height="93%" title="Dokadny opis elementu" />
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnRepeatMin">
+										<g:layer>
+											<g:Label text="Powtarzaj - min" />
+										</g:layer>
+										<g:layer left="125px" top="1px" height="26px" right="0px">
+											<g:IntegerBox ui:field="pedRepeatMin" width="98%"
+												title="Minimalna ilość powtórzeń danego elementu (gdy =0, oznacza, że element nie jest wymagany)" />
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnRepeatMax">
+										<g:layer>
+											<g:Label text="Powtarzaj - max" />
+										</g:layer>
+										<g:layer left="125px" top="1px" height="26px" right="0px">
+											<g:IntegerBox ui:field="pedRepeatMax" width="98%"
+												title="Maksymalna ilość powtórzeń elementu. Gdy &gt;1, wówczas elementy w grupie będą powtarzane" />
+										</g:layer>
+									</g:LayoutPanel>
+									<g:LayoutPanel height="27px" width="100%"
+										ui:field="ppnPK">
+										<g:layer>
+											<g:Label text="Klucz główny" />
+										</g:layer>
+										<g:layer left="125px" top="0px" height="24px" right="0px">
+											<g:ListBox ui:field="pedPK" width="100%"
+												title="Dla grup powtarzanych wskazane jest określenie elementu, który unikanie identyfikuje dany wpis - np. data wykonania, rodzaj wizyty itp." />
+										</g:layer>
+									</g:LayoutPanel>
+								</g:FlowPanel>
+							</g:ScrollPanel>
+						</g:layer>
+
+						<!-- KOSZ -->
+
+						<g:layer left="0px" height="64px" right="0px" bottom="0px">
+							<g:HTMLPanel>
+								<div align="center">
+									<g:Image height="64px" width="64px" ui:field="imgTrash"
+										resource="{res.trash}"
+										title="Usuwa elementy przypisane do dokumentu. Należy nad kosz przeciągnąć zbędny element" />
+								</div>
+
+							</g:HTMLPanel>
+						</g:layer>
+
+					</g:LayoutPanel>
+				</g:east>
+
+			</g:SplitLayoutPanel>
+		</g:layer>
+		<g:layer top="5px" height="42px" left="5px" width="321px">
+			<g:InlineHTML styleName="gwt-PageTitle" ui:field="lbCaption">Edytor
+				dokumentów</g:InlineHTML>
+		</g:layer>
+	</g:LayoutPanel>
+</ui:UiBinder>

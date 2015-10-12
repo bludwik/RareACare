@@ -1,0 +1,98 @@
+{
+	"rareACareDef": {
+		"id": 5,
+		"ver": 0,
+		"name": "Jakaś nazwa",
+		"elems": [{
+			"id": "EF",
+			"label": "FrakcjaEF",
+			"items": [{
+				"lp": 0,
+				"kind": "comment",
+				"descr": "jakistekst"
+			},
+			{
+				"lp": 1,
+				"kind": "separator"
+			},
+			{
+				"lp": 2,
+				"kind": "input",
+				"label": "ef",
+				"descr": "FrakcjawyrzutowaLV",
+				"subId": null,
+				"units": "%",
+				"normMin": 50,
+				"normMax": null,
+				"normDescr": null,
+				"dataType": "int"
+			}]
+		},
+		{
+			"id": "LVEDD",
+			"label": "lvedd",
+			"items": [{
+				"lp": 0,
+				"kind": "comment",
+				"descr": "jakistekst"
+			},
+			{
+				"lp": 1,
+				"kind": "input",
+				"label": "LVEDD",
+				"descr": "Rozmiar LV",
+				"id": null,
+				"units": "mm",
+				"normMin": 20,
+				"normMax": 34,
+				"normDescr": null,
+				"dataType": "int"
+			}]
+		}],
+		"docs": [{
+			"id": "Id dokumentu",
+			"name": "Nazwa dokumentu",
+			"items": [{
+				"lp": 0,
+				"kind": "header",
+				"level": 0,
+				"id": "Ranek",
+				"label": "Jakiś label",
+				"descr": "Jakis opis"
+			},
+			{
+				"lp": 1,
+				"kind": "elem",
+				"isList": false,
+				"primaryKey": null,
+				"id": "EF"
+			},
+			{
+				"lp": 2,
+				"kind": "comment",
+				"descr": "jakis komentarz"
+			},
+			{
+				"lp": 3,
+				"kind": "separator"
+			},
+			{
+				"lp": 4,
+				"kind": "pageBreak"
+			}]
+			
+		}],
+		"docTree": [{
+			"id": "id1",
+			"Ident": 0
+		},
+		{
+			"id": "id2",
+			"Ident": 0
+		},
+		{
+			"id": "id3",
+			"Ident": 1
+		}]
+	}
+}

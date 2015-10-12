@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:p2="urn:import:com.blsoft.rareacare.client.ui.controls"
+	xmlns:p1="urn:import:com.blsoft.rareacare.client.ui">
+	<ui:style>
+	.panel {
+		background-color: ivory;
+	}
+	</ui:style>
+
+	<ui:with field='res' type='com.blsoft.rareacare.client.res.Images' />
+
+	<g:LayoutPanel height="100%" width="100%">
+
+		<!-- Główny ekran -->
+
+		<g:layer top="3.4em" right="0.0em" left="0.0em" bottom="0.0em">
+			<g:SplitLayoutPanel>
+			
+				<!-- Drzewo dokumentów -->
+			
+				<g:west size="230.0">
+					<g:LayoutPanel width="100%" height="100%" styleName="gwt-ScrollPanel">
+						<g:layer left="0px" top="2px" right="2px" bottom="2px">
+							<g:ScrollPanel styleName="gwt-ScrollPanel-padding">
+								<g:FlowPanel width="100%" height="100%" ui:field="docPanel" />
+							</g:ScrollPanel>
+						</g:layer>
+					</g:LayoutPanel>
+				</g:west>
+				
+				<!-- Edytor Dokumentu -->
+				
+				<g:center>
+					<g:ScrollPanel styleName="gwt-ScrollPanel-padding"
+						ui:field="docTreeScrollPanel">
+						<p1:DocInstance width="100%" height="100%"
+							ui:field="docInstance" />
+					</g:ScrollPanel>
+				</g:center>
+			</g:SplitLayoutPanel>
+		</g:layer>
+		
+		<!-- Nagłowek -->
+		
+		<g:layer left="0.0em" top="0.0em" height="3.2em" right="0.0em">
+			<g:HTMLPanel>
+				<div align="right">
+					<g:HorizontalPanel width="320px" spacing="4">
+						<p2:BLButton text="Zamknij" imageResource="{res.close24}"
+							ui:field="btnClose" />
+						<p2:BLButton text="Edytuj" imageResource="{res.edit24}"
+							ui:field="btnEdit" />
+						<p2:BLButton text="Zapisz" imageResource="{res.save24}"
+							ui:field="btnSave" />
+						<p2:BLButton text="Zatwierdź" imageResource="{res.ok24}"
+							ui:field="btnConfirm" />
+						<p2:BLButton text="Koryguj" imageResource="{res.ok24}"
+							ui:field="btnRevert" />
+						<p2:BLButton text="Dodaj" imageResource="{res.add24}"
+							ui:field="btnAdd" />
+						<p2:BLButton text="Załącz" imageResource="{res.add24}"
+							ui:field="btnAttach" />
+						<p2:BLButton text="Usuń" imageResource="{res.delete24}"
+							ui:field="btnDelete" />
+						<p2:LogoMini />
+					</g:HorizontalPanel>
+				</div>
+			</g:HTMLPanel>
+		</g:layer>
+		<g:layer top="0.5em" height="2.5em" left="8px" right="55em">
+			<g:Label styleName="gwt-PageTitle" ui:field="lbCaption" text="Nazwa rej."
+				wordWrap="false" />
+		</g:layer>
+	</g:LayoutPanel>
+
+</ui:UiBinder>
