@@ -123,7 +123,7 @@ public class RegsView extends Composite implements IRegsView, RangeChangeEvent.H
 			}
 		};
 		dataGrid.addColumn(colDsg);
-		dataGrid.setColumnWidth(colDsg, "7EM");
+		dataGrid.setColumnWidth(colDsg, "8EM");
 		
 		
 		// Akcja projektowania rejestru

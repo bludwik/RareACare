@@ -42,7 +42,9 @@ public class RegDocPrv extends DialogBox {
 	}
 	
 	static public void showDoc(Doc doc, JsArray<Elem> elems) {
-		DocInstance prv = new DocInstance(doc, elems);
+//		DocInstance prv = new DocInstance(doc, elems);
+		DocInstance prv = new DocInstance();
+		prv.loadDoc(null, doc, elems, true);
 		get().docPanel.clear();
 		regDocPrv.docPanel.add(prv);
 		regDocPrv.mainLayout.setHeight(String.valueOf(Window.getClientHeight()-50) + "px");
